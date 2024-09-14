@@ -1,1 +1,1 @@
-litellm --config llmlite-config.yaml
+litellm --config litellm-config.yaml

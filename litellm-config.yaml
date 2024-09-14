@@ -1,0 +1,33 @@
+# rag.wtf: use the model_name
+# RouteLLM: use the model
+model_list: 
+  - model_name: yi-coder-1.5b-chat
+    litellm_params: # all params accepted by litellm.completion() - https://docs.litellm.ai/docs/completion/input
+      model: openai/yi-coder:1.5b-chat-q8_0
+      api_base: http://localhost:11434/v1
+  - model_name: gpt4o
+    litellm_params:
+      model: gpt-4o-2024-08-06
+      api_base: https://api.openai.com/v1
+      api_key: os.environ/OPENAI_API_KEY
+  - model_name: llama-3.1-8b-instant
+    litellm_params:
+      model: openai/llama-3.1-8b-instant
+      api_base: https://api.groq.com/openai/v1
+      api_key: os.environ/GROQ_API_KEY
+  - model_name: reflection-70b
+    litellm_params:
+      model: openai/mattshumer/reflection-70b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY
+  - model_name: gemini-1.5-flash
+    litellm_params:
+      model: gemini/gemini-1.5-flash
+      api_key: os.environ/GEMINI_API_KEY
+  - model_name: text-embedding-004
+    litellm_params:
+      model: gemini/text-embedding-004
+      api_key: os.environ/GEMINI_API_KEY
+
+litellm_settings:
+    drop_params: true
