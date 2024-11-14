@@ -5,6 +5,10 @@ model_list:
     litellm_params: # all params accepted by litellm.completion() - https://docs.litellm.ai/docs/completion/input
       model: openai/yi-coder:1.5b-chat-q8_0
       api_base: http://localhost:11434/v1
+  - model_name: qwen2.5-7b-instruct
+    litellm_params: 
+      model: openai/qwen2.5-7b-instruct
+      api_base: http://192.168.1.111:8881/v1      
   - model_name: gpt4o
     litellm_params:
       model: gpt-4o-2024-08-06
